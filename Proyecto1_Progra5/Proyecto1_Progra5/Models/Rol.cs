@@ -4,14 +4,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Proyecto1_Progra5.Models
 {
-    public class ElementosCarrito
+    public class Rol
     {
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [DisplayName("IdElementosCarrito")]
+        [DisplayName("IdRol")] 
         public int Id { get; set; }
-        [Required] public int Cantidad { get; set; }
-        [Required] public int SubTotal { get; set; }
-
+        [Required] public string Nombre { get; set; }
+       // public ICollection<Usuario> Usuarios { get; set; }
     }
 }

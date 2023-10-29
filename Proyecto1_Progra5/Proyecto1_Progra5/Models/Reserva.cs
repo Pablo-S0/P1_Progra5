@@ -7,13 +7,13 @@ namespace Proyecto1_Progra5.Models
     public class Reserva
     {
 
-        [Key] public int IDReserva { get; set; }
-        [Required] public int IDUsuario { get; set; }
-        [ForeignKey("IDUsuario")]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("IdReserva")] 
+        public int Id { get; set; }
         public virtual Usuario Usuario { get; set; }
         [Required] public DateTime FechaReserva { get; set; }
         [Required] public DateTime FechaFinalPago { get; set; }
         [Required] public float Monto { get; set; }
-        [Required] public Boolean Realizado { get; set; }
     }
 }
