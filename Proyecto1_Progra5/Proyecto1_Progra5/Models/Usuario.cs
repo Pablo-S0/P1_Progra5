@@ -14,8 +14,13 @@ namespace Proyecto1_Progra5.Models
         [Required] public string NombreCompleto { get; set; }
         [Required] public string Telefono { get; set; }
 
-        //public Rol Rol { get; set; } 
+        public Rol Rol { get; set; }
 
+        public List<Reserva> Reservas { get; set; }
+
+        public List<Bitacora> Bitacoras { get; set; }
+
+        public List<Carrito> Carrito { get; set; }
 
     }
 }

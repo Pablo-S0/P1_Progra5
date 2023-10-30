@@ -11,9 +11,9 @@ namespace Proyecto1_Progra5.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("IdReserva")] 
         public int Id { get; set; }
-        public virtual Usuario Usuario { get; set; }
         [Required] public DateTime FechaReserva { get; set; }
         [Required] public DateTime FechaFinalPago { get; set; }
         [Required] public float Monto { get; set; }
+        public Usuario Usuario { get; set; }
     }
 }
