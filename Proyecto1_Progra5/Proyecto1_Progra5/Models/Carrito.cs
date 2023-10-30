@@ -17,6 +17,8 @@ namespace Proyecto1_Progra5.Models
         [Required] public Boolean Proyector { get; set; }
         [Required] public Boolean Computador { get; set; }
         [Required] public Boolean Realizado { get; set; }
-
+        public Usuario Usuario { get; set; }
+        public Reserva Reserva { get; set; }
+        public List<ElementosCarrito> ElementosCarrito { get; set; }
     }
 }

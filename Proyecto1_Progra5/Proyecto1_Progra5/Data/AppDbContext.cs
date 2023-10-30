@@ -19,9 +19,6 @@ namespace Proyecto1_Progra5.Data
         public DbSet<TipoProducto> TiposProducto { get; set; }
 
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            
-        }
+        
     }
 }

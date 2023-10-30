@@ -12,6 +12,7 @@ namespace Proyecto1_Progra5.Models
         public int Id { get; set; }
         [Required] public int Cantidad { get; set; }
         [Required] public int SubTotal { get; set; }
-
+        public Carrito Carrito { get; set; }
+        public Producto Productos { get; set; }
     }
 }

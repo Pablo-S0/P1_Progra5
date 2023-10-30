@@ -12,7 +12,7 @@ namespace Proyecto1_Progra5.Models
         public int Id { get; set; }
         [Required] public DateTime FechaHora { get; set; }
         [Required] public String Descripcion { get; set; }
-
+        public Usuario Usuario { get; set; }
 
     }
 }

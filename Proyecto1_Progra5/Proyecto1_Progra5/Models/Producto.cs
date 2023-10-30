@@ -14,5 +14,6 @@ namespace Proyecto1_Progra5.Models
         public string Foto { get; set; }
         [Required] public float Precio { get; set; }
         [Required] public string Descripcion { get; set; }
+        public List<ElementosCarrito> ElementosCarrito { get; set; }
     }
 }
