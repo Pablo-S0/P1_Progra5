@@ -24,12 +24,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Documentos/Universidad/VI Q/Progra V/Proyectos/1/Proyecto1_Progra5/Proyecto1_Progra5/Views/Incio/IniciarSesion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaW9cSW5pY2lhclNlc2lvbi5jc2h0bWw=
+[D:/Documentos/Universidad/VI Q/Progra V/Proyectos/1/Proyecto1_Progra5/Proyecto1_Progra5/Views/Inicio/IniciarSesion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lvXEluaWNpYXJTZXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Documentos/Universidad/VI Q/Progra V/Proyectos/1/Proyecto1_Progra5/Proyecto1_Progra5/Views/Inicio/Registrarse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lvXFJlZ2lzdHJhcnNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Documentos/Universidad/VI Q/Progra V/Proyectos/1/Proyecto1_Progra5/Proyecto1_Progra5/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Documentos/Universidad/VI Q/Progra V/Proyectos/1/Proyecto1_Progra5/Proyecto1_Progra5/Views/Shared/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Documentos/Universidad/VI Q/Progra V/Proyectos/1/Proyecto1_Progra5/Proyecto1_Progra5/Views/Shared/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1lbnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Documentos/Universidad/VI Q/Progra V/Proyectos/1/Proyecto1_Progra5/Proyecto1_Progra5/Views/Shared/_ValidationScriptsPartial.cshtml]
