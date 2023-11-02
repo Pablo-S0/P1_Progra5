@@ -7,11 +7,14 @@ namespace Proyecto1_Progra5.Models
     public class Carrito
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [DisplayName("IdCarrito")] 
+        /*[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("IdCarrito")]*/
         public int Id { get; set; }
 
         [Required]
+        public string IdUsuario { get; set; }
+
+        /*[Required]
         [Range(1, 3, ErrorMessage = "Los valores de Estado son unicamente 1, 2, 3")] 
         public int Estado { get; set; }
         [Required] public Boolean Proyector { get; set; }
@@ -19,6 +22,6 @@ namespace Proyecto1_Progra5.Models
         [Required] public Boolean Realizado { get; set; }
         public Usuario Usuario { get; set; }
         public Reserva Reserva { get; set; }
-        public List<ElementosCarrito> ElementosCarrito { get; set; }
+        public List<ElementosCarrito> ElementosCarrito { get; set; }*/
     }
 }

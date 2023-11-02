@@ -11,12 +11,12 @@ namespace Proyecto1_Progra5.Data
         }
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Bitacora> Bitacoras { get; set; }
+        //public DbSet<Bitacora> Bitacoras { get; set; }
         public DbSet<Carrito> Carritos { get; set; }
-        public DbSet<Reserva> Reservas { get; set; }
-        public DbSet<Rol> Roles { get; set; }
+        //public DbSet<Reserva> Reservas { get; set; }
+        //public DbSet<Rol> Roles { get; set; }
         public DbSet<ElementosCarrito> ElementosCarritos { get; set; }
-        public DbSet<TipoProducto> TiposProducto { get; set; }
+        //public DbSet<TipoProducto> TiposProducto { get; set; }
 
 
         

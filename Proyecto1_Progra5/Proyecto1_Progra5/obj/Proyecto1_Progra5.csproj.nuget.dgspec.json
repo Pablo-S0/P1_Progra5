@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\Universidad\\VI Q\\Progra V\\Proyectos\\1\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5.csproj": {}
+    "C:\\Users\\fabia\\OneDrive\\Desktop\\Programacion V\\Proyecto1\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\Universidad\\VI Q\\Progra V\\Proyectos\\1\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5.csproj": {
+    "C:\\Users\\fabia\\OneDrive\\Desktop\\Programacion V\\Proyecto1\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Universidad\\VI Q\\Progra V\\Proyectos\\1\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5.csproj",
+        "projectUniqueName": "C:\\Users\\fabia\\OneDrive\\Desktop\\Programacion V\\Proyecto1\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5.csproj",
         "projectName": "Proyecto1_Progra5",
-        "projectPath": "D:\\Documentos\\Universidad\\VI Q\\Progra V\\Proyectos\\1\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Universidad\\VI Q\\Progra V\\Proyectos\\1\\Proyecto1_Progra5\\Proyecto1_Progra5\\obj\\",
+        "projectPath": "C:\\Users\\fabia\\OneDrive\\Desktop\\Programacion V\\Proyecto1\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5.csproj",
+        "packagesPath": "C:\\Users\\fabia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fabia\\OneDrive\\Desktop\\Programacion V\\Proyecto1\\Proyecto1_Progra5\\Proyecto1_Progra5\\Proyecto1_Progra5\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fabia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
