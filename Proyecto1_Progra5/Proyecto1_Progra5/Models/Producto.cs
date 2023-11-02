@@ -7,13 +7,14 @@ namespace Proyecto1_Progra5.Models
     public class Producto
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [DisplayName("IdProducto")]
+        /*[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("IdProducto")]*/
         public int Id { get; set; }
         [Required] public string Nombre { get; set; }
-        public string Foto { get; set; }
+        public byte[] Foto { get; set; }
         [Required] public float Precio { get; set; }
         [Required] public string Descripcion { get; set; }
-        public List<ElementosCarrito> ElementosCarrito { get; set; }
+        [Required] public int Tipo { get; set; }
+        //public List<ElementosCarrito> ElementosCarrito { get; set; }
     }
 }

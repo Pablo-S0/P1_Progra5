@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Proyecto1_Progra5.Models.ProductoImagen>
+
+@{
+    ViewData["Title"] = "Reservaciones";
+}
+
+<a asp-area="" asp-controller="ElementosCarritos" asp-action="Index"><img src="~/images/Carrito.png" id="carrito" /></a>
+<div>
+    <center>
+        <img src="~/images/Salon.jpeg" id="salon2" />
+    </center>
+</div>
+
+<div class="container" id="div1">
+    <h2 id="p2">Mobiliario / Equipo</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        @foreach (var item in Model) 
+        {
+            if (item.Tipo == 1)
+            {
+                <form asp-controller="Carritos" asp-action="AgregarAlCarrito" method="post">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="@item.Foto" />
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                            <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <input name="prId" value="@item.Id" type="hidden"/>
+                                </div>
+                                  <button class="btn btn-success" type="submit">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            }
+        }
+    </div>
+        <h2 id="p2">Comidas</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        @foreach (var item in Model)
+        {
+            if (item.Tipo == 2)
+            {
+                <form asp-controller="Carritos" asp-action="AgregarAlCarrito" method="post">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="@item.Foto" />
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                            <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <input name="prId" value="@item.Id" type="hidden"/>
+                                </div>
+                                <button class="btn btn-success" type="submit">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            }
+        }
+    </div>
+    <h2 id="p2">Bebidas</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        @foreach (var item in Model)
+        {
+            if (item.Tipo == 3)
+            {
+                <form asp-controller="Carritos" asp-action="AgregarAlCarrito" method="post">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="@item.Foto" />
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                            <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <input name="prId" value="@item.Id" type="hidden"/>
+                                </div>
+                                <button class="btn btn-success" type="submit">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            }
+        }
+    </div>
+</div>
