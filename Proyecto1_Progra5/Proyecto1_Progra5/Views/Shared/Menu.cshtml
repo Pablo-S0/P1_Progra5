@@ -1,8 +1,12 @@
 ﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
     <div class="container-fluid">
         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Proyecto1_Progra5</a>
+        @if (ViewData["IdRol"] == "1")
+        {
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Administrador:<br>@ViewData["NombreCompleto"]&nbsp;&nbsp;&nbsp;</a>
+        }
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+        aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
@@ -27,8 +31,26 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index">Productos</a>
+                </li>  
+                 <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Roles</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index">Catalogos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Reservas" asp-action="Index">Reservas</a>
+                 </li>
+                
+                
             </ul>
+              @if (ViewData["IdRol"] == "1")
+
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Inicio" asp-action="IniciarSesion">CerrarSesion</a>
+                </li>
+            }
         </div>
     </div>
 </nav>

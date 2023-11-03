@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Proyecto1_Progra5.Models.Reserva>
+
+@{
+    ViewData["Title"] = "Calendario";
+}
+
+<h1>Reservas </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaReserva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaFinalPago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Monto)
+            </th>
+            <th>Dia Evento</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaReserva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaFinalPago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monto)
+            </td>
+         
+            <td>
+                    @Html.ActionLink("Calendario","Calendar","Bitacoras", new {id = item.UsuarioId}, new {@class = "btn btn-primary mx-2"})|
+                    @Html.ActionLink("Editar","Edit","Bitacoras", new {id = item.UsuarioId}, new {@class = "btn btn-primary mx-2"})
+                  
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>

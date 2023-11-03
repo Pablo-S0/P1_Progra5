@@ -6,14 +6,27 @@ namespace Proyecto1_Progra5.Models
 {
     public class Reserva
     {
-
-        /*[Key]
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [DisplayName("IdReserva")] 
+        [DisplayName("IdReserva")]
         public int Id { get; set; }
-        [Required] public DateTime FechaReserva { get; set; }
-        [Required] public DateTime FechaFinalPago { get; set; }
-        [Required] public float Monto { get; set; }
-        public Usuario Usuario { get; set; }*/
+
+        public int UsuarioId { get; set; } // Cambia a int para representar la clave externa del usuario
+
+        [ForeignKey("UsuarioId")] // Define la clave externa
+        public virtual Usuario Usuario { get; set; } // Propiedad de navegación para el usuario
+
+        [Required]
+        [DisplayName("Fecha Reserva")]
+        public DateTime FechaReserva { get; set; }
+
+        [Required]
+        [DisplayName("Ultimo Día De Pago")]
+        public DateTime FechaFinalPago { get; set; }
+
+        [Required]
+        [DisplayName("A Cancelar")]
+        public float Monto { get; set; }
     }
+
 }

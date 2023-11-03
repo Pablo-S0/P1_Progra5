@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Proyecto1_Progra5.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<h1>Usuarios Registrados</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary mx-2">Crear Nuevo Usuario</a>
+</p>
+<table class="table table-bordered table-striped" style="width:100%">
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clave)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCompleto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdRol)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdRol)
+                </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i>Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mx-2"><i class="bi bi-trash-fill"></i>Eliminar</a>|
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary mx-2">Detalles</a> 
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

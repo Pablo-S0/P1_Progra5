@@ -7,11 +7,13 @@ namespace Proyecto1_Progra5.Models
     public class Rol
     {
 
-        /*[Key]
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [DisplayName("IdRol")] 
+        [DisplayName("IdRol")]
         public int Id { get; set; }
         [Required] public string Nombre { get; set; }
-        public List<Usuario> Usuarios { get; set; }*/
+
+
+        // public ICollection<Usuario> Usuarios { get; set; }
     }
 }
