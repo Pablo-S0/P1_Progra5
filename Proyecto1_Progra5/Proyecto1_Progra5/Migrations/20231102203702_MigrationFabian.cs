@@ -11,6 +11,21 @@ namespace Proyecto1_Progra5.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+            name: "Bitacoras",
+            columns: table => new
+            {
+                Id = table.Column<int>(type: "int", nullable: false)
+                    .Annotation("SqlServer:Identity", "1, 1"),
+                UsuarioId = table.Column<int>(type: "int", nullable: false),
+                FechaHoraInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
+                FechaHoraFinal = table.Column<DateTime>(type: "datetime2", nullable: false),
+                Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false)
+            },
+            constraints: table =>
+            {
+                table.PrimaryKey("PK_Bitacoras", x => x.Id);
+            });
+            migrationBuilder.CreateTable(
                 name: "Carritos",
                 columns: table => new
                 {
@@ -39,24 +54,63 @@ namespace Proyecto1_Progra5.Migrations
                 {
                     table.PrimaryKey("PK_Productos", x => x.Id);
                 });
+            migrationBuilder.CreateTable(
+              name: "Roles",
+              columns: table => new
+              {
+                  Id = table.Column<int>(type: "int", nullable: false)
+                      .Annotation("SqlServer:Identity", "1, 1"),
+                  Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
+              },
+              constraints: table =>
+              {
+                  table.PrimaryKey("PK_Roles", x => x.Id);
+              });
+            migrationBuilder.CreateTable(
+             name: "Usuarios",
+             columns: table => new
+             {
+                 Id = table.Column<int>(type: "int", nullable: false)
+                     .Annotation("SqlServer:Identity", "1, 1"),
+                 Correo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                 Clave = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                 NombreCompleto = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                 Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                 IdRol = table.Column<string>(type: "int", nullable: false)
+
+             },
+             constraints: table =>
+             {
+                 table.PrimaryKey("PK_Usuarios", x => x.Id);
+             });
 
             migrationBuilder.CreateTable(
-                name: "Usuarios",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Correo = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Clave = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NombreCompleto = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Usuarios", x => x.Id);
-                });
+             name: "Reservas",
+             columns: table => new
+             {
+                 Id = table.Column<int>(type: "int", nullable: false)
+                     .Annotation("SqlServer:Identity", "1, 1"),
+                 UsuarioId = table.Column<int>(type: "int", nullable: false),
+                 FechaReserva = table.Column<DateTime>(type: "datetime2", nullable: false),
+                 FechaFinalPago = table.Column<DateTime>(type: "datetime2", nullable: false),
+                 Monto = table.Column<float>(type: "real", nullable: false)
+             },
+             constraints: table =>
+             {
+                 table.PrimaryKey("PK_Reservas", x => x.Id);
+                 table.ForeignKey(
+                     name: "FK_Reservas_Usuarios_UsuarioId",
+                     column: x => x.UsuarioId,
+                     principalTable: "Usuarios",
+                     principalColumn: "Id",
+                     onDelete: ReferentialAction.Cascade);
+             });
 
-            migrationBuilder.CreateTable(
+       
+
+
+
+        migrationBuilder.CreateTable(
                 name: "ElementosCarritos",
                 columns: table => new
                 {

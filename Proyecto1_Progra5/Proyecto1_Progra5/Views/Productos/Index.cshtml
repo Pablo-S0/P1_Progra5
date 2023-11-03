@@ -1,59 +1,43 @@
 ﻿@model IEnumerable<Proyecto1_Progra5.Models.ProductoImagen>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Catalogo";
 }
 
-<h1>Index</h1>
+<h1 class="text-center">Catálogo</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p style="text-align: center;">
+    <a asp-action="Create" class="btn btn-primary">Insertar Nuevo Producto</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Foto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Precio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descripcion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tipo)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                <img src="@item.Foto">
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Precio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tipo)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="product-catalog">
+    @foreach (var item in Model)
+    {
+        <div class="product-item">
+            <br><br>
+            <h3 class="text-center">@item.Nombre</h3>
+            <img src="@item.Foto" class="product-image" />
+            <p class="product-description text-center">@item.Descripcion</p>
+            <p class="product-price text-center">$@item.Precio</p>
+
+            <div class="product-actions text-center">
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .product-item {
+        text-align: center; /* Centra el contenido del elemento .product-item */
+    }
+
+    .product-image {
+        max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
+        height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+        display: block; /* Elimina el espacio en blanco por debajo de la imagen */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+</style>
+

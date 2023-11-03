@@ -13,7 +13,7 @@ namespace Proyecto1_Progra5.Models
         [Required] public string Clave { get; set; }
         [Required] public string NombreCompleto { get; set; }
         [Required] public string Telefono { get; set; }
-
+        [Required] public int IdRol { get; set; }
         /*public Rol Rol { get; set; }
 
         public List<Reserva> Reservas { get; set; }

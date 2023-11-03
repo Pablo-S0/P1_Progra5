@@ -1,0 +1,48 @@
+﻿
+<h1>Calendario</h1>
+<div id='calendar'></div>
+
+<script>
+    //jQuery
+    $(function () {
+        GetBitacorasCalendar();
+    });
+
+    function GetBitacorasCalendar() {
+        var events = [];
+
+    @foreach (var bitacora in Model)
+    {
+        <text>
+                events.push({
+                    'id': @bitacora.Id,
+                    'title': '@bitacora.Descripcion',
+                    'start': '@bitacora.FechaHoraInicio.ToString("yyyy-MM-dd HH:mm:ss")',
+                    'end': '@bitacora.FechaHoraFinal.ToString("yyyy-MM-dd HH:mm:ss")',
+                    'allDay': false,
+                    'color': '#FFFF00',
+                    'textColor': '#000000'
+                });
+        </text>
+    }
+
+            var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            plugins: ['interaction', 'dayGrid'],
+            header: {
+                left: 'prevYear,prev,next,nextYear today',
+                center: 'title',
+                right: 'dayGridMonth,dayGridWeek,dayGridDay'
+            },
+            navLinks: true,
+            eventLimit: true,
+            eventClick: function (eventObj) {
+
+            },
+            events: events
+        });
+
+        calendar.render();
+    }
+</script>

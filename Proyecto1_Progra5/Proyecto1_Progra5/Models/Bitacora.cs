@@ -6,13 +6,26 @@ namespace Proyecto1_Progra5.Models
 {
     public class Bitacora
     {
-        /*[Key]
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("IdBitacora")]
         public int Id { get; set; }
-        [Required] public DateTime FechaHora { get; set; }
+        public int UsuarioId { get; set; }
+
+        [ForeignKey("UsuarioId")]
+        public virtual Usuario Usuario { get; set; }
+
+        [Required]
+        public DateTime FechaHoraInicio { get; set; }
+        [Required]
+        public DateTime FechaHoraFinal { get; set; }
+
         [Required] public String Descripcion { get; set; }
-        public Usuario Usuario { get; set; }*/
+
+
+
+
+
 
     }
 }
